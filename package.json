@@ -1,0 +1,15 @@
+{
+  "name": "sleepy-spiral",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && echo 'Build completed! Upload dist folder to Hostinger public_html'",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.12.3"
+  }
+}

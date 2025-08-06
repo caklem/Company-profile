@@ -1,0 +1,17 @@
+# Logo PT Berkah Cakra Solusindo
+
+Please save the company logo provided in the attachment as:
+`logo-cakra-solusindo.png`
+
+The logo features:
+- Blue gear/cog design around the border
+- "CS" letters in stylized blue font
+- "Since - 2014" text
+- "CAKRA SOLUSINDO" text curved around the bottom
+
+This logo will be displayed in the hero section as the main visual element.
+
+Recommended specifications:
+- Format: PNG with transparent background
+- Size: At least 400x400px for optimal quality
+- Colors: Blue (#1e40af) to match website theme

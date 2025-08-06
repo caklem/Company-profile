@@ -1,0 +1,607 @@
+---
+// Portfolio Section Component
+---
+
+<section id="portfolio" class="section">
+  <div class="container">
+    <h2 class="section-title">Portfolio Kami</h2>
+    <p class="section-subtitle">
+      Lihat berbagai proyek website dan aplikasi yang telah kami kembangkan 
+      untuk klien dari berbagai industri
+    </p>
+
+    <!-- Portfolio Filter -->
+    <div class="portfolio-filter">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="website">Website</button>
+      <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+      <button class="filter-btn" data-filter="system">Sistem Informasi</button>
+      <button class="filter-btn" data-filter="mobile">Mobile App</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-grid">
+      <!-- Website Projects -->
+      <div class="portfolio-item" data-category="website">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-laptop"></i>
+            <span>Website Company Profile</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>CV Maju Bersama</h3>
+              <p>Company Profile & Katalog Produk</p>
+              <div class="portfolio-tech">
+                <span>WordPress</span>
+                <span>Custom Theme</span>
+                <span>SEO Optimized</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project1')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="#" class="btn-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="ecommerce">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-shopping-cart"></i>
+            <span>E-Commerce Platform</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Toko Berkah Online</h3>
+              <p>Platform Jual Beli Online</p>
+              <div class="portfolio-tech">
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>Payment Gateway</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project2')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="#" class="btn-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="portfolio-item" data-category="system">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-chart-bar"></i>
+            <span>Sistem Manajemen</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Sistem Keuangan UMKM</h3>
+              <p>Aplikasi Pembukuan Sederhana</p>
+              <div class="portfolio-tech">
+                <span>PHP</span>
+                <span>CodeIgniter</span>
+                <span>Chart.js</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project3')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="#" class="btn-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="portfolio-item" data-category="website">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Website Sekolah</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>SMK Teknologi Bekasi</h3>
+              <p>Website Profil Sekolah & Portal Siswa</p>
+              <div class="portfolio-tech">
+                <span>WordPress</span>
+                <span>LMS Integration</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project4')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="#" class="btn-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="portfolio-item" data-category="system">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-warehouse"></i>
+            <span>Travel & Tourism</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Malang HolyFun</h3>
+              <p>Website Travel Agent & Paket Wisata Malang</p>
+              <div class="portfolio-tech">
+                <span>Astro</span>
+                <span>Tailwind.css</span>
+                <span>Html</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project5')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="#" class="btn-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="portfolio-item" data-category="website">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-clinic-medical"></i>
+            <span>Website Klinik</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Klinik Sehat Bersama</h3>
+              <p>Website & Sistem Booking Online</p>
+              <div class="portfolio-tech">
+                <span>PHP</span>
+                <span>Bootstrap</span>
+                <span>Online Booking</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project6')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="#" class="btn-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="portfolio-item" data-category="website">
+        <div class="portfolio-image">
+          <div class="project-placeholder">
+            <i class="fas fa-mountain"></i>
+            <span>Travel & Tourism</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Malang HolyFun</h3>
+              <p>Website Travel Agent & Paket Wisata Malang</p>
+              <div class="portfolio-tech">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-icon" onclick="openPortfolioModal('project7')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <a href="https://caklem.github.io/Holy-fun/" class="btn-icon" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio CTA -->
+    <div class="portfolio-cta">
+      <h3>Tertarik dengan hasil kerja kami?</h3>
+      <p>Mari diskusikan proyek Anda dan wujudkan ide digital Anda bersama kami</p>
+      <a href="#contact" class="btn btn-primary btn-lg">
+        <i class="fas fa-rocket"></i>
+        Mulai Proyek Baru
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Modal -->
+<div id="portfolioModal" class="portfolio-modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <div id="modalBody" class="modal-body">
+      <!-- Content will be loaded dynamically -->
+    </div>
+  </div>
+</div>
+
+<style>
+  .portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-secondary);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .portfolio-item {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .portfolio-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .project-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .project-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-placeholder span {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+  }
+
+  .portfolio-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio-info p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .portfolio-tech span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .portfolio-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-icon {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-icon:hover {
+    background: white;
+    color: var(--primary-color);
+  }
+
+  .portfolio-cta {
+    text-align: center;
+    background: var(--bg-light);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+  }
+
+  .portfolio-cta h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .portfolio-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Modal Styles */
+  .portfolio-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-content {
+    background-color: var(--bg-white);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .modal-close:hover {
+    color: var(--text-primary);
+  }
+
+  .modal-body {
+    padding: 2rem;
+  }
+
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hide/Show Portfolio Items */
+  .portfolio-item.hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .portfolio-filter {
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .portfolio-overlay {
+      padding: 1.5rem;
+    }
+
+    .portfolio-cta {
+      padding: 2rem 1.5rem;
+    }
+
+    .portfolio-cta h3 {
+      font-size: 1.5rem;
+    }
+
+    .modal-content {
+      width: 95%;
+      margin: 10% auto;
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Portfolio filtering
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('portfolioModal');
+    const modalClose = document.querySelector('.modal-close');
+
+    modalClose.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+
+  // Function to open portfolio modal
+  function openPortfolioModal(projectId) {
+    const modal = document.getElementById('portfolioModal');
+    const modalBody = document.getElementById('modalBody');
+    
+    // Project details (in real application, this would come from a database)
+    const projectDetails = {
+      project1: {
+        title: 'PT Teknologi Nusantara - Company Profile',
+        description: 'Website company profile yang elegant dan profesional dengan design modern dan responsif.',
+        features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Content Management System'],
+        tech: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
+        duration: '3 Minggu',
+        client: 'PT Teknologi Nusantara'
+      },
+      project2: {
+        title: 'Toko Online Fashion - E-Commerce Platform',
+        description: 'Platform e-commerce lengkap dengan sistem pembayaran, inventory management, dan dashboard admin.',
+        features: ['Payment Gateway', 'Inventory Management', 'Order Tracking', 'Admin Dashboard'],
+        tech: ['Laravel', 'Vue.js', 'MySQL', 'Stripe API'],
+        duration: '6 Minggu',
+        client: 'Fashion Store'
+      },
+      project7: {
+        title: 'Malang HolyFun - Travel Agent Website',
+        description: 'Website travel agent yang menyediakan paket wisata lengkap untuk destinasi Malang dan sekitarnya dengan fitur booking online dan galeri foto perjalanan.',
+        features: ['Paket Wisata Interaktif', 'WhatsApp Integration', 'Galeri Portfolio', 'Responsive Design', 'Booking System', 'Multi Admin Contact'],
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages', 'WhatsApp API'],
+        duration: '4 Minggu',
+        client: 'Malang HolyFun Travel'
+      }
+      // Add more project details as needed
+    };
+
+    const project = projectDetails[projectId];
+    if (project) {
+      modalBody.innerHTML = `
+        <h2>${project.title}</h2>
+        <p>${project.description}</p>
+        <div class="project-details">
+          <div class="detail-section">
+            <h4>Fitur Utama:</h4>
+            <ul>
+              ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="detail-section">
+            <h4>Teknologi:</h4>
+            <div class="tech-tags">
+              ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+          </div>
+          <div class="project-meta">
+            <div><strong>Durasi:</strong> ${project.duration}</div>
+            <div><strong>Client:</strong> ${project.client}</div>
+          </div>
+        </div>
+      `;
+      modal.style.display = 'block';
+    }
+  }
+</script>

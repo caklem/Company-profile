@@ -1,0 +1,1176 @@
+---
+// Hero Section Component
+---
+
+<section id="home" class="hero">
+  <div class="hero-background">
+    <div class="hero-pattern"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Solusi Tepat untuk Tantangan Bisnis Anda
+          <span class="gradient-text">Dari Perencanaan hingga Eksekusi</span>
+        </h1>
+        <p class="hero-description">
+          Kami hadir sebagai mitra strategis untuk mendukung transformasi bisnis Anda dengan layanan
+        konsultasi manajemen, keuangan, sumber daya manusia, sertifikasi, serta branding dan marketing
+        yang profesional dan terpercaya.
+        </p>
+        <div class="hero-cta">
+          <a href="https://wa.me/6289653750433?text=Halo%20PT%20Berkah%20Cakra%20Solusindo,%20saya%20tertarik%20untuk%20memulai%20proyek%20baru.%20Mohon%20informasi%20lebih%20lanjut." class="btn btn-primary btn-lg" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            Mulai Proyek Anda
+          </a>
+          <a href="#portfolio" class="btn btn-outline btn-lg">
+            <i class="fas fa-eye"></i>
+            Lihat Portfolio
+          </a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Proyek Selesai</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Tahun Pengalaman</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Client Puas</div>
+          </div>
+        </div>
+
+        <!-- Visi Misi Section (Mobile Only) -->
+        <div class="vision-mission-mobile">
+          <div class="vision-section">
+            <div class="vm-icon vision-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Visi</h3>
+            <p>Menjadi perusahaan konsultan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk transformasi bisnis klien di Indonesia.</p>
+          </div>
+          
+          <div class="mission-section">
+            <div class="vm-icon mission-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Misi</h3>
+            <ul>
+              <li>Memberikan layanan konsultasi berkualitas tinggi dengan pendekatan yang disesuaikan</li>
+              <li>Membantu klien mencapai efisiensi operasional dan pertumbuhan yang berkelanjutan</li>
+              <li>Mengembangkan solusi inovatif berbasis teknologi dan best practices</li>
+              <li>Membangun kemitraan jangka panjang dengan komitmen pada kepuasan klien</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-image">
+          <div class="floating-card card-1">
+            <i class="fas fa-chart-line"></i>
+            <span>Business Consulting</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-users-cog"></i>
+            <span>HR Management</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fas fa-certificate"></i>
+            <span>ISO Certification</span>
+          </div>
+          <div class="floating-card card-4">
+            <i class="fas fa-bullhorn"></i>
+            <span>Digital Marketing</span>
+          </div>
+          <div class="floating-card card-5">
+            <i class="fas fa-balance-scale"></i>
+            <span>Legal Compliance</span>
+          </div>
+          <div class="floating-card card-6">
+            <i class="fas fa-handshake"></i>
+            <span>Partnership</span>
+          </div>
+          <div class="main-visual">
+            <img src="/images/affiliates/Logo 2.png" alt="PT Berkah Cakra Solusindo" class="company-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 120px;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.05;
+    z-index: -1;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 25% 25%, #3b82f6 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn-lg {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+
+  .btn i {
+    margin-right: 0.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  /* Vision Mission Mobile Section */
+  .vision-mission-mobile {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 3rem auto 0;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .vision-section,
+  .mission-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(30, 64, 175, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .vision-section:hover,
+  .mission-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(30, 64, 175, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.1);
+  }
+
+  .vm-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+    position: relative;
+  }
+
+  .vm-icon i {
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  /* Fallback for missing icons */
+  .vm-icon i::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .vision-section .vm-icon i::before {
+    content: "👁";
+    font-size: 1.2rem;
+  }
+
+  .mission-section .vm-icon i::before {
+    content: "🎯";
+    font-size: 1.2rem;
+  }
+
+  /* Alternative icon display method */
+  .vm-icon.vision-icon::after {
+    content: "👁";
+    position: absolute;
+    font-size: 1.3rem;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .vm-icon.mission-icon::after {
+    content: "🎯";
+    position: absolute;
+    font-size: 1.3rem;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .vision-section h3,
+  .mission-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    text-align: center;
+  }
+
+  .vision-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .mission-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .mission-section li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .mission-section li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .mission-section li:last-child {
+    margin-bottom: 0;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1; /* Default order for desktop */
+  }
+
+  .hero-text {
+    order: 2; /* Default order for desktop */
+  }
+
+  .hero-image {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+
+  .main-visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+    border: 4px solid #1e40af;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .company-logo {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .main-visual i {
+    font-size: 4rem;
+    color: white;
+  }
+
+  .floating-card {
+    position: absolute;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    animation: float 6s ease-in-out infinite;
+    border: 2px solid rgba(30, 64, 175, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .floating-card:hover {
+    border-color: #1e40af;
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.25);
+    transform: translateY(-5px);
+  }
+
+  .floating-card i {
+    color: #1e40af;
+    font-size: 1.2rem;
+  }
+
+  .card-1 {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .card-2 {
+    top: 5%;
+    right: 5%;
+    animation-delay: 1s;
+  }
+
+  .card-3 {
+    top: 30%;
+    left: -10%;
+    animation-delay: 2s;
+  }
+
+  .card-4 {
+    top: 30%;
+    right: -10%;
+    animation-delay: 3s;
+  }
+
+  .card-5 {
+    bottom: 10%;
+    left: 5%;
+    animation-delay: 4s;
+  }
+
+  .card-6 {
+    bottom: 5%;
+    right: 5%;
+    animation-delay: 5s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-content {
+      gap: 3rem;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+    }
+
+    .hero-image {
+      width: 450px;
+      height: 450px;
+    }
+
+    .main-visual {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: 120px 0 50px;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2.5rem;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Change order on mobile - Visual first, then text */
+    .hero-visual {
+      order: 1;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text {
+      order: 2;
+    }
+
+    /* Show Vision Mission on Mobile */
+    .vision-mission-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-lg {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 24px;
+      font-size: 1rem;
+    }
+
+    .hero-stats {
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      min-width: 120px;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+    }
+
+    .hero-image {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-visual {
+      width: 140px;
+      height: 140px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      padding: 0;
+      border: 3px solid #1e40af;
+    }
+
+    .company-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 6px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .floating-card {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.8rem;
+      border-radius: 10px;
+      white-space: nowrap;
+      box-shadow: 0 8px 25px rgba(30, 64, 175, 0.2);
+    }
+
+    .floating-card i {
+      font-size: 1.1rem;
+    }
+
+    /* Optimize remaining cards position for mobile */
+    .card-1 {
+      top: 5%;
+      left: -12%;
+      transform: translateX(0);
+    }
+
+    .card-2 {
+      top: 0%;
+      right: -12%;
+      transform: translateX(0);
+    }
+
+    .card-3 {
+      top: 35%;
+      left: -15%;
+      transform: translateX(0);
+    }
+
+    .card-4 {
+      top: 35%;
+      right: -15%;
+      transform: translateX(0);
+    }
+
+    .card-5 {
+      bottom: 5%;
+      left: -12%;
+      transform: translateX(0);
+    }
+
+    .card-6 {
+      bottom: 0%;
+      right: -12%;
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 110px 0 40px;
+    }
+
+    .hero-content {
+      gap: 2rem;
+    }
+
+    /* Hero Visual Optimization for Small Mobile */
+    .hero-visual {
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+    }
+
+    /* Vision Mission Mobile Responsive */
+    .vision-mission-mobile {
+      margin: 2rem auto 0;
+      gap: 1.5rem;
+    }
+
+    .vision-section,
+    .mission-section {
+      padding: 1.2rem;
+    }
+
+    .vm-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .vm-icon i {
+      font-size: 1.3rem;
+    }
+
+    .vision-section h3,
+    .mission-section h3 {
+      font-size: 1.2rem;
+    }
+
+    .vision-section p,
+    .mission-section li {
+      font-size: 0.9rem;
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+
+    .hero-description {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .hero-cta {
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+
+    .btn-lg {
+      max-width: 100%;
+      padding: 12px 20px;
+      font-size: 0.95rem;
+    }
+
+    .hero-stats {
+      flex-direction: row;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .stat-item {
+      min-width: 100px;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+    }
+
+    .hero-image {
+      width: 260px;
+      height: 260px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .main-visual {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      border: 3px solid #1e40af;
+    }
+
+    .company-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .floating-card {
+      padding: 0.5rem 0.7rem;
+      font-size: 0.75rem;
+      border-radius: 8px;
+    }
+
+    .floating-card span {
+      font-size: 0.7rem;
+    }
+
+    .floating-card i {
+      font-size: 1rem;
+    }
+
+    /* Optimize cards for small screens */
+    .card-1 {
+      top: 8%;
+      left: -18%;
+    }
+
+    .card-2 {
+      top: 5%;
+      right: -18%;
+    }
+
+    .card-3 {
+      top: 40%;
+      left: -20%;
+    }
+
+    .card-4 {
+      top: 40%;
+      right: -20%;
+    }
+
+    .card-5 {
+      bottom: 8%;
+      left: -18%;
+    }
+
+    .card-6 {
+      bottom: 5%;
+      right: -18%;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .hero-title {
+      font-size: 1.6rem;
+    }
+
+    .hero-description {
+      font-size: 0.9rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .stat-number {
+      font-size: 1.6rem;
+    }
+
+    /* Ultra-compact hero visual for very small screens */
+    .hero-visual {
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto;
+    }
+
+    .main-visual {
+      width: 100px;
+      height: 100px;
+      border-width: 2px;
+      padding: 0;
+    }
+
+    .company-logo {
+      width: 65px;
+      height: 65px;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Simplify floating cards for tiny screens */
+    .floating-card {
+      padding: 0.4rem;
+      border-radius: 6px;
+      min-width: 35px;
+      justify-content: center;
+    }
+
+    .floating-card span {
+      display: none;
+    }
+
+    .floating-card i {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* Adjust card positions for ultra-small screens */
+    .card-1 {
+      top: 15%;
+      left: -20%;
+    }
+
+    .card-2 {
+      top: 12%;
+      right: -20%;
+    }
+
+    .card-3 {
+      top: 45%;
+      left: -22%;
+    }
+
+    .card-4 {
+      top: 45%;
+      right: -22%;
+    }
+
+    .card-5 {
+      bottom: 15%;
+      left: -20%;
+    }
+
+    .card-6 {
+      bottom: 12%;
+      right: -20%;
+    }
+
+    /* Vision Mission for very small screens */
+    .vision-mission-mobile {
+      margin: 1.5rem auto 0;
+      gap: 1rem;
+    }
+
+    .vision-section,
+    .mission-section {
+      padding: 1rem;
+    }
+
+    .vm-icon {
+      width: 45px;
+      height: 45px;
+    }
+
+    .vm-icon i {
+      font-size: 1.1rem;
+    }
+
+    .vision-section h3,
+    .mission-section h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .vision-section p,
+    .mission-section li {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .mission-section li {
+      margin-bottom: 0.6rem;
+    }
+  }
+</style>
+
+<!-- Visi Misi Section (Desktop) -->
+<section id="visi-misi" class="section visi-misi-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Visi & Misi</h2>
+      <p class="section-subtitle">
+        Komitmen kami untuk memberikan yang terbaik bagi perkembangan bisnis Anda
+      </p>
+    </div>
+    
+    <div class="visi-misi-content">
+      <div class="visi-card">
+        <div class="vm-header">
+          <div class="vm-icon vision-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Visi</h3>
+        </div>
+        <p>Menjadi perusahaan konsultan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk transformasi bisnis klien di Indonesia.</p>
+      </div>
+      
+      <div class="misi-card">
+        <div class="vm-header">
+          <div class="vm-icon mission-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Misi</h3>
+        </div>
+        <ul>
+          <li>Memberikan layanan konsultasi berkualitas tinggi dengan pendekatan yang disesuaikan</li>
+          <li>Membantu klien mencapai efisiensi operasional dan pertumbuhan yang berkelanjutan</li>
+          <li>Mengembangkan solusi inovatif berbasis teknologi dan best practices</li>
+          <li>Membangun kemitraan jangka panjang dengan komitmen pada kepuasan klien</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .visi-misi-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 80px 0;
+  }
+
+  .visi-misi-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .visi-card,
+  .misi-card {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .visi-card::before,
+  .misi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  }
+
+  .visi-card:hover,
+  .misi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .vm-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .vm-header .vm-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    flex-shrink: 0;
+  }
+
+  .vm-header .vm-icon i {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .vm-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    text-align: center;
+  }
+
+  .visi-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+    text-align: justify;
+  }
+
+  .misi-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .misi-card li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    text-align: justify;
+  }
+
+  .misi-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .misi-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .visi-misi-section {
+      padding: 60px 0;
+    }
+
+    .visi-misi-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .visi-card,
+    .misi-card {
+      padding: 2rem;
+    }
+
+    .vm-header {
+      gap: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .vm-header .vm-icon {
+      width: 45px;
+      height: 45px;
+    }
+
+    .vm-header .vm-icon i {
+      font-size: 1.1rem;
+    }
+
+    .vm-header h3 {
+      font-size: 1.3rem;
+    }
+
+    .visi-card p,
+    .misi-card li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .misi-card li {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .visi-misi-section {
+      padding: 50px 0;
+    }
+
+    .visi-card,
+    .misi-card {
+      padding: 1.5rem;
+    }
+
+    .vm-header .vm-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .vm-header .vm-icon i {
+      font-size: 1rem;
+    }
+
+    .vm-header h3 {
+      font-size: 1.2rem;
+    }
+
+    .visi-card p,
+    .misi-card li {
+      font-size: 0.9rem;
+    }
+  }
+</style>
