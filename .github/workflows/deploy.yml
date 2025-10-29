@@ -27,24 +27,55 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
+      - name: Setup SSH Key
+        run: |
+          echo "🔑 Setting up SSH key..."
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          
+          # Check if secret exists
+          if [ -z "${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}" ]; then
+            echo "❌ ERROR: HOSTINGER_SSH_PRIVATE_KEY secret is not set!"
+            echo "Please go to Settings > Secrets and variables > Actions"
+            echo "Add a new secret named: HOSTINGER_SSH_PRIVATE_KEY"
+            echo "Value should be your complete SSH private key (including BEGIN/END lines)"
+            exit 1
+          fi
+          
+          # Write private key to file
+          echo "${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          
+          # Add known hosts
+          ssh-keyscan -H id-dci-web1364.main-hosting.eu >> ~/.ssh/known_hosts 2>/dev/null
+          ssh-keyscan -H 145.79.14.23 >> ~/.ssh/known_hosts 2>/dev/null
+          
+          echo "✅ SSH key setup completed"
+
+      - name: Verify SSH Connection
+        run: |
+          echo "🔍 Testing SSH connection..."
+          ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 \
+            u230709022@id-dci-web1364.main-hosting.eu \
+            "echo '✅ SSH connection successful!'" || {
+            echo "❌ SSH connection failed!"
+            echo "Please verify:"
+            echo "1. SSH private key is correct in GitHub Secrets"
+            echo "2. Public key is uploaded to Hostinger"
+            echo "3. Server hostname/IP is correct"
+            exit 1
+          }
 
       - name: Deploy to Hostinger via SSH
         run: |
-          # Setup SSH known hosts
-          mkdir -p ~/.ssh
-          ssh-keyscan -H id-dci-web1364.main-hosting.eu >> ~/.ssh/known_hosts
-          ssh-keyscan -H 145.79.14.23 >> ~/.ssh/known_hosts
+          echo "📤 Starting deployment..."
           
           # Deploy files using rsync
           rsync -avz --delete \
             --exclude='.git*' \
             --exclude='node_modules' \
             --exclude='.github' \
-            -e ssh \
+            -e "ssh -o StrictHostKeyChecking=no" \
             ./dist/ \
             u230709022@id-dci-web1364.main-hosting.eu:/domains/berkahcakrasolusindo.com/public_html/
           
