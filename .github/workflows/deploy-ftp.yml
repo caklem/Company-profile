@@ -28,27 +28,50 @@ jobs:
         run: npm run build
 
       - name: Verify FTP Secret
+        env:
+          FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
         run: |
-          if [ -z "${{ secrets.HOSTINGER_FTP_PASSWORD }}" ]; then
-            echo "❌ ERROR: HOSTINGER_FTP_PASSWORD secret is not set!"
+          echo "🔍 Checking FTP password secret..."
+          
+          if [ -z "$FTP_PASSWORD" ] || [ "$FTP_PASSWORD" = "" ]; then
             echo ""
-            echo "📋 Please setup FTP password:"
-            echo "1. Go to: https://github.com/caklem/Company-profile/settings/secrets/actions"
-            echo "2. Click 'New repository secret'"
-            echo "3. Name: HOSTINGER_FTP_PASSWORD"
-            echo "4. Value: Your FTP password from Hostinger hPanel"
-            echo "5. Click 'Add secret'"
+            echo "❌ ❌ ❌ ERROR: FTP PASSWORD SECRET NOT FOUND! ❌ ❌ ❌"
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "📋 CARA SETUP FTP PASSWORD:"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            echo "1. Buka link ini:"
+            echo "   https://github.com/caklem/Company-profile/settings/secrets/actions"
+            echo ""
+            echo "2. Klik tombol 'New repository secret'"
+            echo ""
+            echo "3. Isi form:"
+            echo "   Name:  HOSTINGER_FTP_PASSWORD"
+            echo "   Value: [Password FTP Anda dari Hostinger]"
+            echo ""
+            echo "4. Klik 'Add secret'"
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "🔑 Cara dapatkan password FTP:"
+            echo "   1. Login ke hPanel Hostinger"
+            echo "   2. Buka 'FTP Accounts'"
+            echo "   3. Username: u230709022"
+            echo "   4. Lihat atau reset password"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
             exit 1
           else
-            echo "✅ FTP password secret is configured"
+            echo "✅ FTP password secret ditemukan (tersembunyi)"
           fi
 
       - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        env:
+          FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
           server: 145.79.14.23
           username: u230709022
-          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          password: ${{ env.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /domains/berkahcakrasolusindo.com/public_html/
           exclude: |
@@ -57,6 +80,7 @@ jobs:
             **/node_modules/**
             **/.github/**
           dangerous-clean-slate: false
+          dry-run: false
 
       - name: Verify deployment
         run: |
