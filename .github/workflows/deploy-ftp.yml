@@ -27,6 +27,22 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Verify FTP Secret
+        run: |
+          if [ -z "${{ secrets.HOSTINGER_FTP_PASSWORD }}" ]; then
+            echo "❌ ERROR: HOSTINGER_FTP_PASSWORD secret is not set!"
+            echo ""
+            echo "📋 Please setup FTP password:"
+            echo "1. Go to: https://github.com/caklem/Company-profile/settings/secrets/actions"
+            echo "2. Click 'New repository secret'"
+            echo "3. Name: HOSTINGER_FTP_PASSWORD"
+            echo "4. Value: Your FTP password from Hostinger hPanel"
+            echo "5. Click 'Add secret'"
+            exit 1
+          else
+            echo "✅ FTP password secret is configured"
+          fi
+
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -40,6 +56,7 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/.github/**
+          dangerous-clean-slate: false
 
       - name: Verify deployment
         run: |

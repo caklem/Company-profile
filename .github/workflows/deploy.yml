@@ -1,10 +1,11 @@
 name: Deploy to Hostinger
 
 on:
-  push:
-    branches:
-      - main
-      - master
+  # Disabled - using FTP workflow instead
+  # push:
+  #   branches:
+  #     - main
+  #     - master
   workflow_dispatch:
 
 jobs:
