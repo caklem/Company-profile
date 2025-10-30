@@ -22,9 +22,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+        working-directory: sleepy-spiral
         run: npm ci
 
       - name: Build project
+        working-directory: sleepy-spiral
         run: npm run build
 
       - name: Verify FTP Secret
@@ -72,8 +74,8 @@ jobs:
           server: 145.79.14.23
           username: u230709022
           password: ${{ env.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /domains/berkahcakrasolusindo.com/public_html/
+          local-dir: ./sleepy-spiral/dist/
+          server-dir: /public_html/
           exclude: |
             **/.git*
             **/.git*/**

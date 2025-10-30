@@ -22,9 +22,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+        working-directory: sleepy-spiral
         run: npm ci
 
       - name: Build project
+        working-directory: sleepy-spiral
         run: npm run build
 
       - name: Verify FTP Secret
@@ -52,7 +54,11 @@ jobs:
             set net:max-retries 2;
             set net:timeout 30;
             open -u u230709022,$FTP_PASSWORD 145.79.14.23;
-            mirror -R -e -p -v dist /domains/berkahcakrasolusindo.com/public_html;
+            lcd sleepy-spiral/dist;
+            cls -l;
+            pwd;
+            cd /public_html;
+            mirror -R --delete -e -p -v . .;
             bye
           "
           echo "✅ Deployment selesai."
